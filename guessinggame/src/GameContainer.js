@@ -31,7 +31,7 @@ class GameContainer extends Component{
 		return(
 			<div className="gamecontainer">
 				<section className="inputcontainer">
-					<label htmlFor="userguess">Guess a number from 1-10:
+					<label htmlFor="userguess">Guess a number from 1-{this.props.maxNum}:
 					<input type="text" id="userguess" name="userguess" value={this.state.currentInput} onChange={this.updateCurrentInput} /></label>
 					<button className="submitbtn" onClick={this.handleSubmit}>Submit</button>
 				</section>

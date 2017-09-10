@@ -13,7 +13,6 @@
 // Have a reset button if the user gets tired of trying.
 
 import React, { Component } from 'react';
-import StartPage from './StartPage';
 import GameContainer from './GameContainer';
 import InitState from './InitState';
 import './App.css';
@@ -21,19 +20,43 @@ import './App.css';
 class App extends Component {
   constructor(){
     super();
+    this.changeGameType = this.changeGameType.bind(this);
     this.state = InitState;
   }
 
+  // function that assigns gametype,
+  // and max number for math random calculator
+  changeGameType(type, max){
+    let stateCopy = Object.assign({}, this.state);
+    let randomNumber =  Math.floor(Math.random() * (max + 1)); 
+    const gameType = this.state.game.gameType;
+    const targetNumber = this.state.game.targetNumber;
+    stateCopy.targetNumber = randomNumber;
+    stateCopy.gameType = type;
+    this.setState(
+      stateCopy,
+    );
+  }
+
+
   render(){
+
     return (
       <div className="App">
-        <StartPage 
-        />
+        <div className="startpage">
+          <h1>Start Game</h1>
+          <section className="buttons">
+            <button onClick={()=>{this.changeGameType("standard", 10)}}>Standard</button>
+            <button onClick={()=>{this.changeGameType("expert", 100)}}>Expert</button>
+          </section>
+        </div>
         <GameContainer 
+          maxNum={this.state.game.maxNum}
         />
       </div>
     );
   }
+
 }
 
 export default App;
