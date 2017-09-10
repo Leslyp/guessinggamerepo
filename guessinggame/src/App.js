@@ -14,6 +14,7 @@
 
 import React, { Component } from 'react';
 import StartPage from './StartPage';
+import GameContainer from './GameContainer';
 import InitState from './InitState';
 import './App.css';
 
@@ -23,19 +24,13 @@ class App extends Component {
     this.state = InitState;
   }
 
-  // changeGameType(){
-  //   copyOfState = Object.assign({}, this.state); 
-  //   stateCopy.comments.push({
-  //     "text": this.state.currentComment,
-  //     "currentLikes": 0,
-  //     "currentDislikes": 0,
-  //     "replies": []
-  //   });
-  //}
   render(){
     return (
       <div className="App">
-        <StartPage />
+        <StartPage 
+        />
+        <GameContainer 
+        />
       </div>
     );
   }
