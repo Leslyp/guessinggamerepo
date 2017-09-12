@@ -2,19 +2,15 @@ import React from 'react';
 
 // what data is needed in game
 const initState = {
-  game: {
-    gameType: "standard",
-    targetNumber: 0,
-    guesses: 0,
-    currentGuess: '',
-    currentMessage: '',
-    gamesPlayed: 0,
-    offerPlayAgain: false,
-    highScore: {
-      standard: 0,
-      expert: 0,
-    }
-  }
+  currentInput: '',
+  gameType: "",
+  maxNum: 0,
+  targetNumber: 0,
+  guessCount: 0,
+  currentMessage: '',
+  gamesPlayed: 0,
+  standardHigh: 0,
+  expertHigh: 0,
 };
 
 export default initState;
