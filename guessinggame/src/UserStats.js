@@ -4,7 +4,7 @@ function UserStats(props){
   return(
     <div className="showStats">
       <h2>Guesses Made: {props.guessCount}</h2>
-      <h2>Standard Highscore: {props.guessCount}</h2>
+      <h2>{props.gameType} Highscore: {props.guessCount}</h2>
       <button className="resetbtn" onClick={props.resetGame}>Reset</button>
     </div>
   );

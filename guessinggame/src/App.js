@@ -113,6 +113,7 @@ class App extends Component {
         <div className="UserStats">
           <UserStats 
             guessCount={this.state.guessCount}
+            gameType={this.state.gameType}
             resetGame={this.resetGame}
           />
         </div>
