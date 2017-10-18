@@ -2,4 +2,49 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: lightblue;
+  font-size: 20px;
+}
+
+.App {
+	border: 3px solid grey;
+	margin: 10% 20%;
+}
+
+.startpage .buttons {
+	border: 2px dotted grey;
+	display: inline;
+	padding: 1%;
+	background-color: #ccdce0;
+}
+
+h1 {
+	color: white;
+	text-shadow: 2px 2px 1px #317691;
+}
+
+button {
+	border-radius: 5px;
+	margin: 2%;
+	width: 8%;
+}
+
+button:hover {
+	background-color: #fffda8;
+}
+
+label {
+	color: #184b5e;
+	display: block;
+}
+
+input {
+	border-radius: 5px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 10%;
+}
+h2 {
+	color: #226077;
 }
